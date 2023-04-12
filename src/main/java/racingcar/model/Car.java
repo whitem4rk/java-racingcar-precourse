@@ -1,13 +1,14 @@
 package racingcar.model;
 
 public class Car {
-    public Car(String name, int score) {
-        this.name = name;
-        this.score = score;
-    }
-
-    private String name;
+    private static final int ZERO = 0;
+    private final String name;
     private int score;
+
+    public Car(String name) {
+        this.name = name;
+        this.score = ZERO;
+    }
 
     public String getName() {
         return name;
@@ -17,4 +18,7 @@ public class Car {
         return score;
     }
 
+    public void addScore() {
+        score += 1;
+    }
 }
